@@ -33,7 +33,7 @@ export default {
         window.pageYOffset ||
         document.documentElement.scrollTop ||
         document.body.scrollTop;
-      this.scroll = scroll - 25;
+      this.scroll = scroll / 2 - 25;
     },
   },
   computed: {

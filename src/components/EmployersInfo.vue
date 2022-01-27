@@ -17,7 +17,12 @@
               alt="slika"
             />
             <h5 style="font-size: 15px; line-height: 1.4; font-weight: 400">
-              TAMARA ILJIC
+              <a
+                href="https://www.instagram.com/tanana_____/"
+                target="blank"
+                style="text-decoration: none; color: black"
+                >TAMARA ILJIC</a
+              >
             </h5>
             <span class="job-description"> FRIZER</span>
           </div>
@@ -28,7 +33,12 @@
               alt="slika"
             />
             <h5 style="font-size: 15px; line-height: 1.4; font-weight: 400">
-              SVJETLANA MILJIC
+              <a
+                href="https://www.instagram.com/s.miljic_/"
+                target="blank"
+                style="text-decoration: none; color: black"
+                >SVJETLANA MILJIC</a
+              >
             </h5>
             <span class="job-description"> POMOCNI FRIZER</span>
           </div>

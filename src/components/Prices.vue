@@ -7,12 +7,7 @@
         <h5 class="mb-5 mt-5 pt-5 pb-5">CIJENE</h5>
       </div>
     </div>
-    <div class="card-container">
-      <price />
-      <price />
-      <price />
-      <price />
-      <price />
+    <div class="col-md-3 m-3">
       <price />
       <price />
       <price />
@@ -37,12 +32,7 @@ export default {
   height: 100vh;
 }
 .card-container {
-  display: flex;
-  flex-direction: row;
-}
-.card-container:after {
-  content: "";
-  display: table;
-  clear: both;
+  display: grid;
+  grid-column-gap: 50px;
 }
 </style>
