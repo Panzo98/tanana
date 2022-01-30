@@ -9,7 +9,7 @@
     </div>
     <div class="">
       <div class="text-center">
-        <div class="staff shadow-sm mr-5 ml-5">
+        <div class="staff">
           <div class="emp-card">
             <img
               class="mb-4 mt-4"
@@ -75,7 +75,10 @@ export default {
   padding: 15px;
 }
 .staff:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 3px 66px -24px rgba(0, 0, 0, 0.2);
+}
+.staff:hover img {
+  border: solid #fa5bdd 1px;
 }
 .job-description {
   font-size: 12px;
@@ -86,10 +89,11 @@ export default {
   height: 4em;
 }
 img {
+  transition: 0.5s;
   height: 108px;
   width: 108px;
   object-fit: cover;
   border-radius: 50%;
-  border: solid #fa5bdd 1px;
+  border: solid #fff 1px;
 }
 </style>

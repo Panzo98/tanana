@@ -7,7 +7,8 @@
         <h5 class="mb-5 mt-5 pt-5 pb-5">CIJENE</h5>
       </div>
     </div>
-    <div class="col-md-3 m-3">
+    <div class="card-container">
+      <price />
       <price />
       <price />
       <price />
@@ -29,10 +30,31 @@ export default {
 <style>
 .prices-container {
   background: #fff;
-  height: 100vh;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1140px;
+}
+
+@media (max-width: 1478px) {
+  .card-container {
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    width: 1140px;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 .card-container {
+  width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
-  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+  grid-template-columns: repeat(4, minmax(auto, 1fr));
+  justify-content: center;
+  padding-bottom: 120px;
 }
 </style>

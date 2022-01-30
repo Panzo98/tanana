@@ -3,8 +3,7 @@
     <div>
       <photo-component />
       <navbar />
-      <employers-info />
-      <prices />
+      <router-view />
     </div>
   </div>
 </template>
@@ -12,12 +11,13 @@
 <script>
 import PhotoComponent from "./components/PhotoComponent.vue";
 import Navbar from "./components/Navbar.vue";
-import EmployersInfo from "./components/EmployersInfo.vue";
-import Prices from "./components/Prices.vue";
 
 export default {
   name: "App",
-  components: { PhotoComponent, Navbar, EmployersInfo, Prices },
+  components: {
+    Navbar,
+    PhotoComponent,
+  },
 };
 </script>
 

@@ -33,7 +33,7 @@ export default {
         window.pageYOffset ||
         document.documentElement.scrollTop ||
         document.body.scrollTop;
-      this.scroll = scroll / 2 - 25;
+      this.scroll = -(scroll / 2) - 25;
     },
   },
   computed: {
@@ -53,6 +53,7 @@ export default {
   background-size: cover;
   position: relative;
   background-position: 50%;
+  background-attachment: fixed;
 }
 .img-container ::before ::after {
   box-sizing: border-box;

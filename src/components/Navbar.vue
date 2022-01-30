@@ -5,25 +5,40 @@
     variant="info"
     sticky
   >
-    <b-navbar-brand class="navbar-brand">TANANA</b-navbar-brand>
-
-    <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-    <b-collapse id="nav-collapse" is-nav>
-      <b-navbar-nav class="ms-auto txt-color">
-        <b-nav-item>POCETNA</b-nav-item>
-        <b-nav-item>KONTAKT</b-nav-item>
-      </b-navbar-nav>
-    </b-collapse>
+    <div class="navbar-edit">
+      <b-navbar-brand class="navbar-brand">TANANA</b-navbar-brand>
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-nav class="ms-auto txt-color">
+          <b-nav-item @click="changeRoute('/')">POCETNA</b-nav-item>
+          <b-nav-item @click="changeRoute('/contact')">KONTAKT</b-nav-item>
+        </b-navbar-nav>
+      </b-collapse>
+    </div>
   </b-navbar>
 </template>
 
 <script>
 export default {
   name: "Navbar",
+  methods: {
+    changeRoute(route) {
+      this.$router.push(route);
+    },
+  },
 };
 </script>
 
 <style scoped>
+.navbar-edit {
+  width: 1140px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 .navbar-container {
   display: flex;
   flex-direction: row;

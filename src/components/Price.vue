@@ -1,17 +1,15 @@
 <template>
-  <div class="column">
-    <div class="price-card mx-5 my-5">
-      <h6 class="mb-4 my-4 pricing-entry">MUSKO SISANJE</h6>
-      <p><span class="price">10.00 KM - 16.00 KM</span></p>
-      <ul class="zebra">
-        <li>Šišanje 10.00 KM</li>
-        <li>Šišanje + pranje kose 12.00 KM</li>
-        <li>Šišanje + pranje + masaža glave 16.00 KM</li>
-        <li>Šišanje + pranje + masaža glave 16.00 KM</li>
-      </ul>
-      <p class="text-center">
-        <button class="button px-4 py-3">Naruči se</button>
-      </p>
+  <div class="price-card">
+    <h6 class="mb-4 my-4 pricing-entry">MUSKO SISANJE</h6>
+    <p><span class="price">10.00 KM - 16.00 KM</span></p>
+    <ul class="zebra">
+      <li>Šišanje 10.00 KM</li>
+      <li>Šišanje + pranje kose 12.00 KM</li>
+      <li>Šišanje + pranje + masaža glave 16.00 KM</li>
+      <li>Šišanje + pranje + masaža glave 16.00 KM</li>
+    </ul>
+    <div class="button-center">
+      <button class="button px-4 py-3">Naruči se</button>
     </div>
   </div>
 </template>
@@ -32,12 +30,7 @@ export default {
   font-size: 14px;
   border-radius: 30px;
 }
-.button:hover {
-  transition: 0.5s;
-  background-color: #fa5bdd;
-  border: 1px solid #fa5bdd;
-  color: #fafafa;
-}
+
 li {
   font-family: "Montserrat", Arial, sans-serif;
   display: flex;
@@ -68,7 +61,9 @@ ul {
   color: #fa5bdd;
 }
 .price-card {
-  width: 16em;
+  margin: 1em 1.5em;
+  min-width: 16em;
+  max-width: 16em;
   border: 1px solid #f0f0f0;
   text-align: center;
 }
@@ -82,5 +77,15 @@ ul.zebra li:nth-child(odd) {
 .column {
   grid-column-start: 1;
   grid-column-end: 3;
+}
+.button-center {
+  display: flex;
+  justify-content: center;
+}
+.price-card:hover button {
+  transition: 0.5s;
+  border: 1px solid #fa5bdd;
+  background-color: #fa5bdd;
+  color: #fafafa;
 }
 </style>
