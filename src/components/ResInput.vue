@@ -6,7 +6,8 @@
       <input v-model="prezime" placeholder="Prezime" type="text" />
     </div>
     <div class="inp-fields">
-      <input v-model="date" placeholder="" type="date" />
+      <p class="placeholder">Datum</p>
+      <input placeholder="Datum" type="date" @change="setDate" />
       <input v-model="telefon" placeholder="Telefon" type="text" />
     </div>
     <textarea
@@ -27,7 +28,7 @@ export default {
     return {
       ime: "",
       prezime: "",
-      datum: "YYYY-MM-DD",
+      datum: "",
       telefon: "",
       poruka: "",
       message: "",
@@ -52,6 +53,9 @@ export default {
       } catch (err) {
         return alert("Nazalost doslo je do greske! :(");
       }
+    },
+    setDate(e) {
+      this.datum = e.target.value;
     },
   },
 };
@@ -112,5 +116,54 @@ input {
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
+}
+.placeholder {
+  display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .title {
+    padding-left: 5px;
+    padding-top: 30px;
+    font-size: 28px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+  .inp-fields {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  input {
+    outline: 0;
+    border: transparent;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    color: white;
+    background-color: #fa5bdd;
+    height: 60px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  input::placeholder {
+    color: white;
+  }
+  textarea::placeholder {
+    color: white;
+  }
+  .placeholder {
+    display: block;
+    color: white;
+    opacity: 1;
+    background-color: #fa5bdd;
+    font-size: 14px;
+    margin-top: 20px;
+    padding-left: 3px;
+  }
 }
 </style>

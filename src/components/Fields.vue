@@ -35,6 +35,7 @@ export default {
   align-items: center;
   text-align: center;
 }
+
 .address-field {
   width: 100%;
   height: 4em;
@@ -75,5 +76,15 @@ export default {
   height: 427px;
   background-color: #fb6ce0;
   box-shadow: 0px 20px 66px -20px rgba(0, 0, 0, 0.2);
+}
+@media only screen and (max-width: 1200px) {
+  .info-fields {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    height: 427px;
+    background-color: #fb6ce0;
+    box-shadow: 0px 20px 66px -20px rgba(0, 0, 0, 0.2);
+  }
 }
 </style>

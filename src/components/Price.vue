@@ -6,7 +6,7 @@
       <li>Šišanje 10.00 KM</li>
       <li>Šišanje + pranje kose 12.00 KM</li>
       <li>Šišanje + pranje + masaža glave 16.00 KM</li>
-      <li>Šišanje + pranje + masaža glave 16.00 KM</li>
+      <li>Šišanje + pranj 14.00 KM</li>
     </ul>
     <div class="button-center">
       <button class="button px-4 py-3">Naruči se</button>
@@ -61,9 +61,7 @@ ul {
   color: #fa5bdd;
 }
 .price-card {
-  margin: 1em 1.5em;
-  min-width: 16em;
-  max-width: 16em;
+  width: 285px;
   border: 1px solid #f0f0f0;
   text-align: center;
 }
@@ -87,5 +85,14 @@ ul.zebra li:nth-child(odd) {
   border: 1px solid #fa5bdd;
   background-color: #fa5bdd;
   color: #fafafa;
+}
+@media only screen and (max-width: 1200px) {
+  .price-card {
+    width: 100%;
+    border: 1px solid #f0f0f0;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 35px;
+  }
 }
 </style>

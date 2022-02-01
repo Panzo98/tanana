@@ -62,6 +62,32 @@ export default {
   display: flex;
   flex-direction: column;
 }
+@media only screen and (max-width: 1200px) {
+  .emp-container {
+    padding: 7em 0;
+    background: #fafafa !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .staff {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fff;
+    border-radius: 4px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all 0.3s ease;
+    min-height: 17rem;
+    padding: 15px;
+  }
+  .emp-card {
+    min-height: 15rem;
+  }
+}
+
 .staff {
   display: flex;
   justify-content: space-around;

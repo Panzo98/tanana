@@ -3,6 +3,7 @@
     <div class="footer-infowidth">
       <div class="four-divs">
         O NAMA
+        <div style="width: 70px; height: 1px; background-color: white"></div>
         <div class="div-text">
           U naselju Obilićevo, otvoren je novi frizerski salon Tanana. Dodjite i
           posjetite nas! :)
@@ -12,7 +13,8 @@
             <a href="https://www.facebook.com/tananahairsalon" target="_blank">
               <b-icon-facebook
                 style="
-                  font-size: 35px;
+                  height: 35px;
+                  width: 35px;
                   cursor: pointer;
                   text-decoration: none;
                   color: white;
@@ -27,7 +29,8 @@
             >
               <b-icon-instagram
                 style="
-                  font-size: 35px;
+                  height: 35px;
+                  width: 35px;
                   cursor: pointer;
                   text-decoration: none;
                   color: white;
@@ -124,5 +127,33 @@ export default {
   height: 300px;
   margin-right: auto;
   margin-left: auto;
+}
+@media only screen and (max-width: 1200px) {
+  .footer-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-color: #252525;
+  }
+  .footer-infowidth {
+    display: flex;
+    padding-top: 110px;
+    padding-bottom: 110px;
+    flex-direction: column;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .four-divs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 160px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 2px;
+    height: 100%;
+    color: white;
+  }
 }
 </style>

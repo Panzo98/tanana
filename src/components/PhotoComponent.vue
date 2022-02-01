@@ -1,7 +1,6 @@
 <template>
   <div>
     <div
-      class="img-container"
       :style="
         'background-image: url(' +
         image +
@@ -9,6 +8,7 @@
         scroll +
         'px;'
       "
+      class="img-container"
     >
       <div></div>
     </div>
@@ -52,10 +52,18 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  background-position: 50%;
+  background-position: 50% -25px;
   background-attachment: fixed;
 }
 .img-container ::before ::after {
   box-sizing: border-box;
+}
+@media only screen and (max-width: 1200px) {
+  .img-container {
+    /* Position and center the image to scale nicely on all screens */
+    height: 100vh;
+    background-position: center center !important;
+    background-attachment: scroll;
+  }
 }
 </style>

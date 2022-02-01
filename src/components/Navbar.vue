@@ -10,8 +10,22 @@
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ms-auto txt-color">
-          <b-nav-item @click="changeRoute('/')">POCETNA</b-nav-item>
-          <b-nav-item @click="changeRoute('/contact')">KONTAKT</b-nav-item>
+          <span
+            @click="changeRoute('/')"
+            :class="[
+              this.$route.path === '/' ? 'colorise-text fadeIn fadeOut' : '',
+            ]"
+            >POCETNA</span
+          >
+          <span
+            @click="changeRoute('/contact')"
+            :class="[
+              this.$route.path === '/contact'
+                ? 'colorise-text fadeIn fadeOut'
+                : '',
+            ]"
+            >KONTAKT</span
+          >
         </b-navbar-nav>
       </b-collapse>
     </div>
@@ -21,6 +35,7 @@
 <script>
 export default {
   name: "Navbar",
+
   methods: {
     changeRoute(route) {
       this.$router.push(route);
@@ -30,6 +45,125 @@ export default {
 </script>
 
 <style scoped>
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  animation: fadeOut ease 0.5s;
+  -webkit-animation: fadeOut ease 0.5s;
+  -moz-animation: fadeOut ease 0.5s;
+  -o-animation: fadeOut ease 0.5s;
+  -ms-animation: fadeOut ease 0.5s;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-ms-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+span {
+  cursor: pointer;
+  margin: auto 1rem;
+  color: rgb(92, 92, 92);
+}
+
+span:hover {
+  color: #fa5bdd;
+  transition: 0.5s;
+}
+
+.colorise-text {
+  color: #fa5bdd !important;
+  transition: 0.5s;
+}
 .navbar-edit {
   width: 1140px;
   display: flex;
@@ -52,6 +186,33 @@ export default {
   padding-right: auto;
   padding-left: auto;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 1200px) {
+  .navbar-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    min-height: 4em;
+    background: #fcfcfc !important;
+    z-index: 3;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.07);
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: auto;
+    padding-left: auto;
+    justify-content: space-between;
+  }
+  .navbar-edit {
+    width: 1140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .navbar-brand {
