@@ -39,15 +39,20 @@
       <div style="width: 95px"></div>
       <div class="right-info-container">
         <div class="inp-fields">
-          <input placeholder="Ime" type="text" />
-          <input placeholder="Prezime" type="text" />
+          <input v-model="ime" placeholder="Ime" type="text" />
+          <input v-model="prezime" placeholder="Prezime" type="text" />
         </div>
         <div class="inp-fields">
           <p class="placeholder">Datum</p>
           <input placeholder="Datum" type="date" />
-          <input placeholder="Telefon" type="text" />
+          <input v-model="telefon" placeholder="Telefon" type="text" />
         </div>
-        <textarea class="multiline-text" placeholder="Poruka" type="text" />
+        <textarea
+          v-model="poruka"
+          class="multiline-text"
+          placeholder="Poruka"
+          type="text"
+        />
         <button>Posalji</button>
       </div>
     </div>
@@ -57,6 +62,15 @@
 <script>
 export default {
   name: "ContactPage",
+  data() {
+    return {
+      ime: "",
+      prezime: "",
+      datum: "",
+      telefon: "",
+      poruka: "",
+    };
+  },
   methods: {
     changeRoute() {
       this.$router.push("/");
@@ -133,6 +147,14 @@ input {
   margin: auto;
   margin-top: 3rem;
 }
+.left-info-container {
+  height: 100%;
+  width: 416px;
+  padding: 0 15px;
+}
+.right-info-container {
+  width: 50%;
+}
 @media only screen and (max-width: 527px) {
   .contact-info-container {
     display: flex;
@@ -141,13 +163,28 @@ input {
     height: 416px;
     margin: auto;
   }
-}
-.left-info-container {
-  height: 100%;
-  width: 416px;
-  padding: 0 15px;
-}
-.right-info-container {
-  width: 50%;
+  .container {
+    height: 120vh;
+    width: 100%;
+  }
+  .right-info-container {
+    width: 92%;
+    margin-left: 4%;
+  }
+  .inp-fields {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+  }
+  input {
+    outline: 0;
+    border: transparent;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 60px;
+    margin-right: 10px;
+    font-size: 14px;
+  }
 }
 </style>
