@@ -1,13 +1,18 @@
 <template>
   <b-navbar
     toggleable="lg"
-    class="bg-light text-dark navbar-container shadow-sm p-3 bg-white"
+    class="bg-light text-dark shadow-sm p-lg-3 bg-white navbar-container"
     variant="info"
     sticky
   >
     <div class="navbar-edit">
-      <b-navbar-brand class="navbar-brand">TANANA</b-navbar-brand>
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-navbar-brand class="navbar-brand">
+        <span @click="changeRoute('/')"> TANANA </span>
+      </b-navbar-brand>
+      <b-navbar-toggle
+        target="nav-collapse"
+        class="collapse-style"
+      ></b-navbar-toggle>
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ms-auto txt-color">
           <span
@@ -37,7 +42,11 @@ export default {
   name: "Navbar",
 
   methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
     changeRoute(route) {
+      this.scrollToTop();
       this.$router.push(route);
     },
   },
@@ -188,33 +197,6 @@ span:hover {
   justify-content: space-between;
 }
 
-@media only screen and (max-width: 1200px) {
-  .navbar-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-
-    min-height: 4em;
-    background: #fcfcfc !important;
-    z-index: 3;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.07);
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: auto;
-    padding-left: auto;
-    justify-content: space-between;
-  }
-  .navbar-edit {
-    width: 1140px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
 .navbar-brand {
   color: #000;
   font-weight: 700;
@@ -239,5 +221,43 @@ a {
 }
 .txt-color {
   color: #fa5bdd;
+}
+@media only screen and (max-width: 1200px) {
+  .navbar-brand {
+    color: white;
+  }
+  .navbar-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 2rem;
+    background: black !important;
+    z-index: 3;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.07);
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 1rem;
+    justify-content: space-between;
+  }
+  .navbar-light {
+    color: white !important;
+  }
+
+  span {
+    color: white;
+  }
+  .navbar-edit {
+    width: 1140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .collapse-style {
+    color: white;
+    background-color: white;
+  }
 }
 </style>

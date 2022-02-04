@@ -8,22 +8,33 @@
       </div>
     </div>
     <div class="card-container">
-      <price />
-      <price />
-      <price />
-      <price />
-      <price />
-      <price />
-      <price />
+      <div v-for="(data, index) in myJson" :key="index">
+        <price :data="data" @scroll="scrollToReservation" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import Price from "./Price.vue";
+import json from "../data.json";
 export default {
   components: { Price },
   name: "Prices",
+  data() {
+    return {
+      myJson: json,
+    };
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
+    scrollToReservation() {
+      //need to fix
+      window.scrollTo(0, 2700);
+    },
+  },
 };
 </script>
 

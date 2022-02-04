@@ -1,15 +1,18 @@
 <template>
   <div class="price-card">
-    <h6 class="mb-4 my-4 pricing-entry">MUSKO SISANJE</h6>
-    <p><span class="price">10.00 KM - 16.00 KM</span></p>
+    <h6 class="mb-4 my-4 pricing-entry">
+      {{ data.title.toUpperCase() }}
+    </h6>
+    <p>
+      <span class="price"> {{ data.price }}</span>
+    </p>
     <ul class="zebra">
-      <li>Šišanje 10.00 KM</li>
-      <li>Šišanje + pranje kose 12.00 KM</li>
-      <li>Šišanje + pranje + masaža glave 16.00 KM</li>
-      <li>Šišanje + pranj 14.00 KM</li>
+      <li v-for="(item, index) in data.detail" :key="index">{{ item }}</li>
     </ul>
     <div class="button-center">
-      <button class="button px-4 py-3">Naruči se</button>
+      <button class="button px-4 py-3" @click="$emit('scroll')">
+        Naruči se
+      </button>
     </div>
   </div>
 </template>
@@ -17,6 +20,7 @@
 <script>
 export default {
   name: "Price",
+  props: ["data", "scrollToTop"],
 };
 </script>
 
@@ -49,6 +53,7 @@ ul {
   width: 100%;
   padding-left: 0px;
   list-style: none;
+  margin-bottom: 30px;
 }
 .pricing-entry ul li {
   font-size: 14px;

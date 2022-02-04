@@ -1,0 +1,56 @@
+[
+  {
+    "title": "Muško šišanje",
+    "price": "10.00 - 16.00 KM",
+    "detail": [
+      "Šišanje 10.00 KM",
+      "Šišanje + pranje kose 12.00 KM",
+      "Šišanje + pranje + masaža glave 16.00 KM"
+    ]
+  },
+  {
+    "title": "Žensko šišanje",
+    "price": "10.00 KM - 15.00 KM",
+    "detail": ["Šišanje 10.00 KM", "Šišanje lokne 15.00 KM"]
+  },
+  {
+    "title": "Dječije šišanje",
+    "price": "10.00 KM",
+    "detail": ["Muško i žensko dječije šišanje 10.00 KM"]
+  },
+  {
+    "title": "COLOR",
+    "price": "20.00 KM - 120.00 KM",
+    "detail": [
+      "Farbanje izrasta 20.00 KM - 40.00 KM",
+      "Farbanje cijele dužine 35.00 KM - 65.00 KM",
+      "Razne tehnike pramenova 60.00 KM - 120.00 KM",
+      "Skidanje boje 30.00 KM - 60.00 KM"
+    ]
+  },
+  {
+    "title": "Feniranje",
+    "price": "12.00 KM - 28.00 KM",
+    "detail": [
+      "Kratka kosa 13.00 KM",
+      "Srednje duga kosa 22.00 KM",
+      "Duga kosa 25.00 KM",
+      "Extra duga kosa 28.00 KM",
+      "Kreiranje kovrdža difuzorom 13.00 KM",
+      "Talasi 12.00 KM - 18.00 KM"
+    ]
+  },
+  {
+    "title": "Tretmani",
+    "price": "5.00 KM - 40.00 KM ",
+    "detail": [
+      "Tretmanski šamp + mask 5.00 KM - 15.00 KM",
+      "Dubinski tretman za rekonstrukciju dlake 20.00 KM - 40.00 KM"
+    ]
+  },
+  {
+    "title": "Svečane frizure",
+    "price": "25.00 KM - 50.00 KM",
+    "detail": []
+  }
+]

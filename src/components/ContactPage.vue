@@ -155,6 +155,9 @@ input {
 .right-info-container {
   width: 50%;
 }
+.placeholder {
+  display: none;
+}
 @media only screen and (max-width: 527px) {
   .contact-info-container {
     display: flex;
@@ -185,6 +188,16 @@ input {
     height: 60px;
     margin-right: 10px;
     font-size: 14px;
+  }
+  .placeholder {
+    display: block;
+    color: rgb(70, 69, 69);
+    opacity: 1;
+    background-color: white;
+    font-size: 14px;
+    margin-top: 20px;
+    padding-left: 3px;
+    cursor: default;
   }
 }
 </style>
